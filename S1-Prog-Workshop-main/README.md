@@ -4,7 +4,7 @@
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![vert](images_rapport/keep_green_only.png)     |         
+| ![og](images/logo.png)| ![vert](Images_rapport/keep_green_only.png)     |         
 
 ## Exercice 2 : Echanger les canaux
 
@@ -12,13 +12,13 @@ J'ai d'abord voulu échanger les couleurs bleu et rouge en écrivant `color.r=co
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/channels_swap_rate.png)     |    
+| ![og](images/logo.png)| ![channels](Images_rapport/channels_swap_rate.png)     |    
 
 J'ai ensuite trouvé que je devais utilisé `std::swap()`pour échanger les canaux correctement :
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/channels_swap.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/channels_swap.png)     |
 
 ## Exercice 3 : Noir et blanc
 
@@ -32,19 +32,19 @@ float moyenne {(color.r + color.b + color.g)/3.f} ;
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/black_white.png)     |    
+| ![og](images/logo.png)| ![channels](Images_rapport/black_white.png)     |    
 
 ## Exercice 4 : Négatif
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/negative.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/negative.png)     |
 
 ## Exercice 5 : Dégradé
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/degrade.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/degrade.png)     |
 
 ## Exercice 6 : Miroir
 
@@ -54,7 +54,7 @@ Voici le résultat après avoir corrigé ces erreurs :
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/mirror.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/mirror.png)     |
 
 ## Exercice 7 : Image bruitée
 
@@ -77,7 +77,7 @@ avant de me rendre compte de mes erreurs. En effet, ma deuxième boucle `for` n'
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/noise.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/noise.png)     |
 
 ## Exercice 8 : Rotation de 90°
 
@@ -86,7 +86,7 @@ De plus, dans cet exercice on ne modifie pas l’image d’origine (d’où le `
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/angle.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/angle.png)     |
 
 
 ## Exercice 9 : RGB split
@@ -101,15 +101,15 @@ if (x<30 || (image.width()-30)<=x)
 Mais alors je n’obtenais pas exactement le résultat voulu. 
 **Raté n°1 :**
 
-![rate](images_rapport/RGB_rate.png)
+![rate](Images_rapport/RGB_rate.png)
 
 **Raté n°2 :**
 
-![rate](images_rapport/RGB_rate2.png)
+![rate](Images_rapport/RGB_rate2.png)
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/noise.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/noise.png)     |
 
 ## Exercice 10 : Luminosité
 
@@ -117,13 +117,13 @@ Mais alors je n’obtenais pas exactement le résultat voulu.
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/photo.jpg)| ![light](images_rapport/light_sombre.jpg)     |
+| ![og](images/photo.jpg)| ![light](Images_rapport/light_sombre.jpg)     |
 
 Avec a=0,5 comme exposant j’obtiens l’image éclaircie :
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/photo.jpg)| ![light](images_rapport/light_clair.jpg)     |
+| ![og](images/photo.jpg)| ![light](Images_rapport/light_clair.jpg)     |
 
 ## Exercice 11 : Disque
 
@@ -144,7 +144,7 @@ int milieu{image.width()/2} ;
 ```
 donnant : 
 
-![rate](images_rapport/disque_rate1.png)
+![rate](Images_rapport/disque_rate1.png)
 
 2e essai : J’ai utilisé l’équation d’un cercle :
 ```cpp
@@ -166,11 +166,11 @@ int milieu {500/2} ;
 ```
 Ce qui m'a donné :
 
-![rate](images_rapport/disque_rate2.png)
+![rate](Images_rapport/disque_rate2.png)
 
 En me relisant, j’ai rapidement vu que le problème était la limite de x et y que j’avais posée à `2*rayon` au lieu de `milieu + rayon`. Avec cette correction faite j’ai obtenu l’image suivante :
 
-![rate](images_rapport/rond.png)
+![rate](Images_rapport/rond.png)
 
 ## Exercice 12 : Cercle
 
@@ -178,7 +178,7 @@ Pour cet effet, j'ai d'abord pensé qu'il fallait ajouté au disque blanc fait d
 Finalement, j'ai compris que je pouvais colorer les pixels à l'intérieur d'un cercle mais également à l'extérieur.
 Ainsi, j'ai compris qu'il fallait colorer en blanc les pixels qui sont à la fois à l'intérieur du cercle de rayon `rayon+10` et à l'extérieur du cercle de rayon `rayon`.
 
-![rate](images_rapport/cercle.png)
+![rate](Images_rapport/cercle.png)
 
 
 ## Autre effet :
@@ -210,7 +210,7 @@ sil::Image animation(sil::Image const& image)
 ```
 Cela est dû aux 2e et 3e boucles `for` et le pas de 5.
 
-![rate](images_rapport/anime_rate.png)
+![rate](Images_rapport/anime_rate.png)
 
 ## Exercice 13 : Animation 
 
@@ -238,7 +238,7 @@ sil::Image animation(sil::Image const& image)
 ```
 Mais j'ai obtenu :
 
-![rate](images_rapport/anime_rate2.png)
+![rate](Images_rapport/anime_rate2.png)
 
 car je n'avais pas pensé au fait que le centre vertical reste le même, `y` ne varie pas, seulement `x`.
 J'ai donc corrigé cela en remplaçant la première ligne de ma seconde boucle`for` (`for (int y{milieu-rayon}; y <= milieu+rayon; y++)`) par :
@@ -249,13 +249,13 @@ J'ai donc corrigé cela en remplaçant la première ligne de ma seconde boucle`f
 
 Seulement, il restait un erreur dans mon code puisque j'ai obtenu l'image suivante :
 
-![rate](images_rapport/anime_rate3.png)
+![rate](Images_rapport/anime_rate3.png)
 
 En effet, j'avais oublié de changer le centre de l'axe des ordonnées sur la ligne du `if` donc le disque se construisait autour du mauvais centre. 
 
 Après correction de cette dernière erreur j'ai peu créer plusieurs images de mon disque à différentes positions sur l'axe des abscisses. J'ai généré 60 images avec le disque qui se déplaces de 5 pixels à chaque chnagement de position, obtenant ainsi l'animation suivante :
 
-![rate](images_rapport/gif_animation.gif)
+![rate](Images_rapport/gif_animation.gif)
 
 ## Exercice 14 : Mosaïque
 
@@ -264,7 +264,7 @@ Il fallait alors parcourir les pixels de l'image 5 fois, d'où les boucles `for`
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/mosa.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/mosa.png)     |
 
 
 ## Exercice 15 : Mosaïque miroir
@@ -277,7 +277,7 @@ Puis, après avoir remarqué qu'il y avait 4 images différentes qui se répeten
 La dernière chose que j'avais oublié et que je ne voyais pas c'est qu'il fallait augmenter x de `image.width()*i` et y de `image.height()*j` pour prendre les pixels de la bonne petite image.
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/mosa_mir.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/mosa_mir.png)     |
 
 ## Exercice 16 : Glitch 
 
@@ -285,4 +285,4 @@ J'ai rapidement compris qu'il fallait partir d'un pixel aléatoire, prendre ceux
 
 | Avant      |    Après     |
 | ------------- | :-----------: | 
-| ![og](images/logo.png)| ![channels](images_rapport/glitch.png)     |
+| ![og](images/logo.png)| ![channels](Images_rapport/glitch.png)     |
